@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import { createTheme, Container, ThemeProvider } from '@mui/material';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+import { Header, RecipePage } from './components';
+import { HomePage } from './components/homePage';
+import { RecipePageDataWrapper } from './components/recipePage/recipePageDataWrapper';
+import { Unit } from './utils/measurementUtils';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#fafafa'
+    },
+    secondary: {
+      main: '#b2dfdb'
+    }
+  },
+  typography: {
+    fontFamily: 'HelveticaNeue-Light'
+  }
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <ThemeProvider theme={theme} >
+          <Header />
+          <Container maxWidth='md' sx={containerCss}>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='recipes/:recipeName' element={<RecipePageDataWrapper />} />
+            </Routes>
+          </Container>
+        </ThemeProvider>
+      </div>
+    </BrowserRouter>
   );
+}
+
+const containerCss = {
+  marginTop: '10px',
+  textAlign: 'left',
 }
 
 export default App;
