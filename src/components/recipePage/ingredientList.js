@@ -17,23 +17,6 @@ export const IngredientList = (props) => {
     </Grid>
   ))
   return gridItems;
-  // return (
-  //   <div>
-  //     <h4>Ingredients:</h4>
-  //       {props.ingredients.map((section, i) => (
-  //         <div key={i}>
-  //           {section.sectionName && <h5>{section.sectionName}</h5>}
-  //           <ul>
-  //             {section.ingredientList.map(ingredient => (
-  //               <li key={ingredient.ingredient}>
-  //                 {formatIngredient(ingredient)}
-  //               </li>
-  //             ))}
-  //           </ul>
-  //         </div>
-  //       ))}
-  //   </div>
-  // );
 }
 
 const formatIngredient = (ingredient) => {

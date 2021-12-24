@@ -25,5 +25,5 @@ export const pluralizeUnit = (quantity, unit) => {
     case Unit.TABLESPOON:
       return quantity === 1 ? 'tablespoon' : 'tablespoons';
   }
-  return '';
+  return unit;
 }

@@ -1,14 +1,23 @@
 import { useParams } from 'react-router-dom';
 import { RecipePage } from '.';
-import { Unit } from '../../utils/measurementUtils'
+import { NotFound } from './notFound';
+import { Unit } from '../../utils/measurementUtils';
+import data from '../../data';
 
 export const RecipePageDataWrapper = (props) => {
   const params = useParams();
-  const recipeName = params.recipeName;
-  console.log(recipeName);
-  return (
-    <RecipePage {...testRecipe} />
-  );
+  const rawRecipeName = params.recipeName;
+  console.log(rawRecipeName);
+  const recipeName = unencodeRecipeName(rawRecipeName)
+  console.log(recipeName)
+  const recipe = data[recipeName]
+  console.log(recipe)
+  console.log(data)
+  return recipe ? <RecipePage {...recipe} /> : <NotFound />;
+}
+
+const unencodeRecipeName = (rawRecipeName) => {
+  return rawRecipeName.replaceAll('+', '');
 }
 
 const testRecipe = {
