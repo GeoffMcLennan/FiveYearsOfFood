@@ -2,10 +2,9 @@ import { createTheme, Container, ThemeProvider } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import { Header, RecipePage } from './components';
+import { Header, ScrollToTop } from './components';
 import { HomePage } from './components/homePage';
 import { RecipePageDataWrapper } from './components/recipePage/recipePageDataWrapper';
-import { Unit } from './utils/measurementUtils';
 
 const theme = createTheme({
   palette: {
@@ -17,13 +16,14 @@ const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'HelveticaNeue-Light'
+    fontFamily: '"HelveticaNeue-Light"'
   }
 });
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="App">
         <ThemeProvider theme={theme} >
           <Header />

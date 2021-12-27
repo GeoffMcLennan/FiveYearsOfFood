@@ -1,8 +1,60 @@
 .App {
   text-align: center;
+  font-family: "HelveticaNeue-Light";
 }
 
 .MuiCard-root {
   padding: 0 15px;
   margin-bottom: 10px;
+}
+
+h3.Story-Title {
+  margin: 10px 0;
+}
+
+.image-container {
+  padding: 0;
+  max-height: 300px;
+}
+
+.inner-image {
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: scale-down;
+}
+
+.recipe-link-card {
+  height: 300px;
+  position: relative;
+}
+
+.img-header {
+  margin: 20px;
+  text-decoration: none;
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.white {
+  color: whitesmoke
+}
+
+.top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.top-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
