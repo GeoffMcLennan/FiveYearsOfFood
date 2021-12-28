@@ -48,6 +48,7 @@ h3.Story-Title {
 }
 
 .top-right {
+  text-align: right;
   position: absolute;
   right: 0;
   top: 0;
@@ -60,6 +61,7 @@ h3.Story-Title {
 }
 
 .bottom-right {
+  text-align: right;
   position: absolute;
   bottom: 0;
   right: 0;

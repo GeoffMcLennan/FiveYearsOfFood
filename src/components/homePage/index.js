@@ -18,7 +18,7 @@ export const HomePage = (props) => {
             I am so excited to see where we find ourselves in the next 5 years, and I couldn't imagine cooking beside anyone else for the rest of my life.
           </p>
           <p>
-            Thanks for being the best cooking partner (and life partner) I could ask for.
+            Thanks for being the best cooking partner (and life partner) I could ask for!
           </p>
           <p>
             I love you so much
@@ -65,6 +65,11 @@ export const HomePage = (props) => {
           imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/C37D6C5A-1092-4C0B-A630-DF6665365BDB_1_105_c.cropped.jpeg'
           title='Classic Shortrib Stew'
           titleClasses='white top-left' />
+      <RecipeLink 
+          path='sweet+potato+apple+hash' 
+          imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/001F6EFF-889C-43A6-986A-FF7AD699F7A0_1_105_c.cropped.jpeg'
+          title='Sweet Potato and Apple Hash'
+          titleClasses='white top-right' />
     </Grid>
   );
 }
