@@ -21,7 +21,7 @@ export const IngredientList = (props) => {
 
 const formatIngredient = (ingredient) => {
   const unitString = pluralizeUnit(ingredient.quantity, ingredient.unit);
-  if (ingredient.quantity && unitString.length) {
+  if (ingredient.quantity && unitString && unitString.length) {
     return `${ingredient.quantity} ${unitString} - ${ingredient.ingredient}`;
   }
   if (ingredient.quantity) {

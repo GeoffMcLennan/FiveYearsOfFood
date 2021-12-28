@@ -58,3 +58,9 @@ h3.Story-Title {
   bottom: 0;
   left: 0;
 }
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

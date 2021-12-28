@@ -35,6 +35,11 @@ export const HomePage = (props) => {
           <img className='inner-image' src='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/IMG_20190612_192006_Original.jpg' />
         </Card>
       </Grid>
+      <Grid item xs={12} md={4}>
+        <Card className='image-container'>
+          <img className='inner-image' src='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/IMG_20180422_140532_Original.jpg' />
+        </Card>
+      </Grid>
       <RecipeLink 
           path='pasta+alla+nelson' 
           imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/847D2F61-B154-4649-B19E-A64D542DD013_1_105_c.cropped.jpeg'
@@ -44,7 +49,22 @@ export const HomePage = (props) => {
           path='a+very+spicy+salad'
           imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/A6A63D9D-7917-44C1-8F61-7C31A07A7B67_1_105_c.cropped.jpeg'
           title='A Very Spicy Salad'
+          titleClasses='white bottom-right' />
+      <RecipeLink 
+          path='pasta+alla+norvan'
+          imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/AF872CFF-7FCB-4290-9C71-40ACA3EEEBBF_1_105_c.thumbnail.jpeg'
+          title='Pasta alla Norvan'
           titleClasses='white top-right' />
+      <RecipeLink 
+          path='lemongrass+fried+chicken'
+          imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/C6033ECD-F3DE-4C70-A2E2-DD6B02A78818_1_105_c.cropped.jpeg'
+          title='Lemongrass Fried Chicken'
+          titleClasses='white bottom-left' />
+      <RecipeLink 
+          path='classic+shortrib+stew' 
+          imageUrl='https://five-years-of-food-bucket.s3.us-west-2.amazonaws.com/C37D6C5A-1092-4C0B-A630-DF6665365BDB_1_105_c.cropped.jpeg'
+          title='Classic Shortrib Stew'
+          titleClasses='white top-left' />
     </Grid>
   );
 }
